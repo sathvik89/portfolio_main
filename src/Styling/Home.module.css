@@ -1,0 +1,64 @@
+/* Root Container */
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh; /* Ensure it takes up most of the viewport height */
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+/* Name Container */
+.nameContainer {
+  font-size: 3rem; /* Large font size for the name */
+  font-weight: bold;
+  color: #ff6f61; /* Highlight color (soft orange) */
+  margin-bottom: 1rem;
+  text-transform: uppercase; /* Makes the name stand out */
+  letter-spacing: 0.1rem; /* Adds spacing between letters */
+
+  /* Animation */
+  animation: fadeInUp 2s ease-out forwards;
+  opacity: 0; /* Start with the element invisible */
+  transform: translateY(20px); /* Start slightly below its final position */
+}
+
+/* Keyframes for Fade-In and Move-Up Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0; /* Fully transparent */
+    transform: translateY(20px); /* Moved down */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* In its final position */
+  }
+}
+
+/* Brief Description Container */
+.breifContainer {
+  font-size: 1.5rem; /* Medium font size for the description */
+  font-weight: 500;
+  color: #888; /* Subtle gray for secondary text */
+  line-height: 1.6; /* Improves readability */
+}
+
+/* Hover Effect on Brief Description */
+.breifContainer:hover {
+  color: #ffffff; /* Bright white on hover */
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nameContainer {
+    font-size: 2.5rem; /* Slightly smaller font for mobile */
+  }
+
+  .breifContainer {
+    font-size: 1.2rem; /* Smaller font for mobile */
+  }
+}
