@@ -1,4 +1,4 @@
-.skillcontainer {
+/* .skillcontainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 2.5rem;
@@ -90,6 +90,154 @@
 
 .skillsinner:hover .skillname::after {
   width: 50%;
+}
+
+@media (max-width: 768px) {
+  .skillcontainer {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.5rem;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .skillimage {
+    width: 70px;
+    height: 70px;
+  }
+
+  .skillname {
+    font-size: 1rem;
+  }
+} */
+.skillcontainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2.5rem;
+  padding: 4rem 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skillsinner {
+  background: linear-gradient(135deg, #1e293b, #263548);
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  animation: fadeInUp 0.6s ease-out both;
+  transform-style: preserve-3d;
+}
+
+.skillsinner:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.skillsinner:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.skillsinner:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.skillsinner:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.skillsinner:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.skillsinner:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.skillsinner:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.skillsinner:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.skillsinner::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(14, 165, 233, 0.1),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.skillsinner:hover {
+  transform: translateY(-15px) scale(1.05) rotateX(5deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 0 20px rgba(14, 165, 233, 0.2);
+  background: linear-gradient(135deg, #263548, #334155);
+}
+
+.skillsinner:hover::before {
+  opacity: 1;
+}
+
+.skillimage {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 0 10px rgba(14, 165, 233, 0.4));
+  transition: all 0.4s ease-in;
+  border-radius: 50%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.skillsinner:hover .skillimage {
+  transform: scale(1.25) rotateY(10deg);
+  filter: drop-shadow(0 0 15px rgba(14, 165, 233, 0.6));
+}
+
+.skillname {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #e2e2e2;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.skillname::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.skillsinner:hover .skillname::after {
+  width: 50%;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @media (max-width: 768px) {

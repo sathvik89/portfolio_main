@@ -1,4 +1,4 @@
-.aboutcontainer {
+/* .aboutcontainer {
   padding: 3.5rem 2.5rem;
   max-width: 1000px;
   margin: 3rem auto;
@@ -107,6 +107,180 @@
 .Socialmedia div:hover {
   transform: translateY(-8px) scale(1.05);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .aboutcontainer {
+    padding: 2.5rem 1.5rem;
+    margin: 2rem 1rem;
+  }
+
+  .about {
+    font-size: 2.2rem;
+  }
+
+  .Socialmedia {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Socialmedia div {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+  }
+} */
+.aboutcontainer {
+  padding: 3.5rem 2.5rem;
+  max-width: 1000px;
+  margin: 3rem auto;
+  background: #111827;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 5px 15px rgba(14, 165, 233, 0.1);
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.8s ease-in-out;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.aboutcontainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+}
+
+.about {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  color: #e2e2e2;
+  position: relative;
+  padding-bottom: 0.8rem;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+}
+
+.about::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+  border-radius: 4px;
+}
+
+.info {
+  margin-bottom: 2.5rem;
+  line-height: 1.9;
+}
+
+.info p {
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  text-align: justify;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.3px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.Socialmedia {
+  display: flex;
+  justify-content: center;
+  gap: 1.8rem;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+
+.Socialmedia div {
+  padding: 0.9rem 1.6rem;
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+.Socialmedia div:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.Socialmedia div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.Socialmedia div:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.Socialmedia div:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.Socialmedia a {
+  color: #e2e2e2;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.github {
+  background: linear-gradient(135deg, #333, #222);
+}
+
+.linkedin {
+  background: linear-gradient(135deg, #0077b5, #0066a1);
+}
+
+.gmail {
+  background: linear-gradient(135deg, #ea4335, #d62516);
+}
+
+.insta {
+  background: linear-gradient(
+    45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+}
+
+.Socialmedia div:hover {
+  transform: translateY(-8px) scale(1.05) rotateY(5deg);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @media (max-width: 768px) {

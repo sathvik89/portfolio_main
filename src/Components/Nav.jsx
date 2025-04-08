@@ -12,8 +12,8 @@ export default function Nav() {
     return (
       <div className={styles.navbar}>
         <Link
-          to="/home"
-          className={location.pathname === "/home" ? `${styles.active}` : ""}
+          to="/"
+          className={location.pathname === "/" ? `${styles.active}` : ""}
         >
           Home
         </Link>
@@ -51,7 +51,7 @@ export default function Nav() {
       <BrowserRouter>
         <Elements />
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/aboutme" element={<Aboutme />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
