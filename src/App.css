@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500;700&family=Raleway:wght@400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -12,8 +13,6 @@ body {
   overflow-x: hidden;
   position: relative;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500;700&family=Raleway:wght@400;500&display=swap");
 
 body::before {
   content: "";
