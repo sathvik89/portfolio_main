@@ -11,8 +11,13 @@ export default function Contact() {
   }
   function handleSubmit() {
     // t.preventDefault();
-    alert(`message sent from ${email}. Thankyou ${name} 🫶🏻`);
+    {
+      email &&
+        name &&
+        alert(`message sent from ${email}. Thankyou ${name} 🫶🏻`);
+    }
   }
+
   return (
     <div className={styles.mainContact}>
       <h1 className={styles.heading}>Get in touch</h1>
@@ -23,7 +28,7 @@ export default function Contact() {
       <div className={styles.leftcard}>
         <h1>Contact information</h1>
         <div>Email : koriginjasathvik@gmail.com</div>
-        <div>Phone : 9347868783</div>
+        <div>Phone : +91 9347868783</div>
       </div>
       <div className={styles.rightcard}>
         <h1 className={styles.cardtitle}>Send me a message</h1>
