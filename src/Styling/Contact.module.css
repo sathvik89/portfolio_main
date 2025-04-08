@@ -1,0 +1,206 @@
+.mainContact {
+  padding: 4rem 2.5rem;
+  max-width: 1000px;
+  margin: 3rem auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2.5rem;
+}
+
+.heading {
+  grid-column: 1 / -1;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #e2e2e2;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+  border-radius: 4px;
+}
+
+.subhead {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 2.5rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.leftcard {
+  background: linear-gradient(135deg, #1e293b, #263548);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.leftcard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+}
+
+.leftcard h1 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: #e2e2e2;
+  position: relative;
+  padding-bottom: 0.6rem;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.leftcard h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+  border-radius: 3px;
+}
+
+.leftcard div {
+  color: #cbd5e1;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.05rem;
+  padding-left: 0.5rem;
+  border-left: 2px solid rgba(14, 165, 233, 0.3);
+}
+
+.rightcard {
+  background: linear-gradient(135deg, #1e293b, #263548);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.rightcard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+}
+
+.cardtitle {
+  font-size: 1.6rem;
+  margin-bottom: 1.8rem;
+  color: #e2e2e2;
+  position: relative;
+  padding-bottom: 0.6rem;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.cardtitle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+  border-radius: 3px;
+}
+
+.rightcard form {
+  display: flex;
+  flex-direction: column;
+}
+
+.rightcard label {
+  margin-bottom: 0.6rem;
+  color: #cbd5e1;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+
+.rightcard input {
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.rightcard textarea {
+  min-height: 180px;
+  resize: vertical;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.rightcard input:focus,
+.rightcard textarea:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(14, 165, 233, 0.2);
+}
+
+.rightcard button {
+  align-self: flex-start;
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  color: white;
+  padding: 0.9rem 1.8rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.3);
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.rightcard button:hover {
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(14, 165, 233, 0.4);
+}
+
+@media (max-width: 768px) {
+  .mainContact {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.5rem;
+    margin: 2rem 1rem;
+  }
+
+  .heading {
+    font-size: 2.2rem;
+  }
+
+  .leftcard,
+  .rightcard {
+    padding: 2rem;
+  }
+}

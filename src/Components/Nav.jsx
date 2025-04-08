@@ -6,15 +6,43 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import Rights from "./Rights";
 export default function Nav() {
   const Elements = () => {
     return (
       <div className={styles.navbar}>
-        <Link to="/home">Home</Link>
-        <Link to="/aboutme">About</Link>
-        <Link to="/skills">Skills</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/contact">Contact</Link>
+        <Link
+          to="/home"
+          className={location.pathname === "/home" ? `${styles.active}` : ""}
+        >
+          Home
+        </Link>
+        <Link
+          to="/aboutme"
+          className={location.pathname === "/aboutme" ? `${styles.active}` : ""}
+        >
+          About
+        </Link>
+        <Link
+          to="/skills"
+          className={location.pathname === "/skills" ? `${styles.active}` : ""}
+        >
+          Skills
+        </Link>
+        <Link
+          to="/projects"
+          className={
+            location.pathname === "/projects" ? `${styles.active}` : ""
+          }
+        >
+          Projects
+        </Link>
+        <Link
+          to="/contact"
+          className={location.pathname === "/contact" ? `${styles.active}` : ""}
+        >
+          Contact
+        </Link>
       </div>
     );
   };
@@ -30,6 +58,7 @@ export default function Nav() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
+      <Rights />
     </div>
   );
 }
