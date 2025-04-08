@@ -3,7 +3,7 @@ import FoodRecipesImage from "../ProjectImages/Foodapp.png";
 import BMIImage from "../ProjectImages/BMI.png";
 import CalculatorImage from "../ProjectImages/Calculator.png";
 import ColorsSwitcherImage from "../ProjectImages/Colorswitcher.png";
-import TemperatureConverterImage from "../ProjectImages/TemperatureConverter.png";
+import TemperatureConverterImage from "../ProjectImages/Temperatureconverter.png";
 import TodoImage from "../ProjectImages/Todo.png";
 import UniverseImage from "../ProjectImages/Universe.png";
 import Project from "./Project";
