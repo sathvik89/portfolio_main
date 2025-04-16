@@ -1,64 +1,49 @@
 import styles from "../Styling/Nav.module.css";
-import { Link } from "react-router-dom";
-import Home from "./Home";
-import Aboutme from "./Aboutme";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Skills from "./Skills";
-import Projects from "./Projects";
-import Contact from "./Contact";
-import Rights from "./Rights";
-export default function Nav() {
-  const Elements = () => {
-    return (
-      <div className={styles.navbar}>
-        <Link
-          to="/"
-          className={location.pathname === "/" ? `${styles.active}` : ""}
-        >
-          Home
-        </Link>
-        <Link
-          to="/aboutme"
-          className={location.pathname === "/aboutme" ? `${styles.active}` : ""}
-        >
-          About
-        </Link>
-        <Link
-          to="/skills"
-          className={location.pathname === "/skills" ? `${styles.active}` : ""}
-        >
-          Skills
-        </Link>
-        <Link
-          to="/projects"
-          className={
-            location.pathname === "/projects" ? `${styles.active}` : ""
-          }
-        >
-          Projects
-        </Link>
-        <Link
-          to="/contact"
-          className={location.pathname === "/contact" ? `${styles.active}` : ""}
-        >
-          Contact
-        </Link>
-      </div>
-    );
-  };
+
+export default function Nav({
+  activeSection,
+  scrollToHome,
+  scrollToAbout,
+  scrollToSkills,
+  scrollToProjects,
+  scrollToContact,
+}) {
   return (
-    <div>
-      <BrowserRouter>
-        <Elements />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/aboutme" element={<Aboutme />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </BrowserRouter>
-      <Rights />
+    <div className={styles.navbar}>
+      <button
+        onClick={scrollToHome}
+        className={activeSection === "home" && styles.active}
+      >
+        Home
+      </button>
+
+      <button
+        onClick={scrollToAbout}
+        className={activeSection === "aboutme" && styles.active}
+      >
+        About
+      </button>
+
+      <button
+        onClick={scrollToSkills}
+        className={activeSection === "skills" && styles.active}
+      >
+        Skills
+      </button>
+
+      <button
+        onClick={scrollToProjects}
+        className={activeSection === "projects" && styles.active}
+      >
+        Projects
+      </button>
+
+      <button
+        onClick={scrollToContact}
+        className={activeSection === "contact" && styles.active}
+      >
+        Contact
+      </button>
     </div>
   );
 }
