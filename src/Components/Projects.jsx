@@ -21,7 +21,7 @@ export default function Projects() {
     - Fully responsive and interactive design ensures accessibility across devices.
     - Strict adherence to the university’s UI style guide for a consistent and professional look.
     - Future plans include integrating a robust backend system to further enhance functionality."
-        projectLink="https://food-recipe-six-lac.vercel.app"
+        projectLink="https://library-space-rishihood.vercel.app"
       />
       <Project
         imageURL={FoodRecipesImage}
