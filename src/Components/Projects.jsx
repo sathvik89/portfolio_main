@@ -19,7 +19,7 @@ export default function Projects() {
         features="Features: 
     - Utilizes React Routing for seamless navigation.
     - Fully responsive and interactive design ensures accessibility across devices.
-    - Strict adherence to the university’s UI style guide for a consistent and professional look.
+    - Strict adherence to the university's UI style guide for a consistent and professional look.
     - Future plans include integrating a robust backend system to further enhance functionality."
         projectLink="https://library-space-rishihood.vercel.app"
       />
