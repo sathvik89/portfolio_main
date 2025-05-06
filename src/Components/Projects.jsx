@@ -7,12 +7,25 @@ import TemperatureConverterImage from "../ProjectImages/Temperatureconverter.png
 import TodoImage from "../ProjectImages/Todo.png";
 import UniverseImage from "../ProjectImages/Universe.png";
 import LibraryImage from "../ProjectImages/Library.png";
+import compitetorAssistant from "../ProjectImages/CompetitorAssistant.png";
 import Project from "./Project";
 export default function Projects() {
   return (
     <div>
       <Project
         imageURL={LibraryImage}
+        Title="Library Management System"
+        tech="Tech Stacks: React.js, JavaScript, HTML, CSS"
+        desci="Description: The Library Management System is a digital solution designed to streamline the library experience. It addresses common issues such as cluttered bookshelves, difficulty in locating books, and managing library occupancy. This platform provides an intuitive online interface where students can easily access all essential information about the library. Features include a well-organized display of books sorted by sections, user authentication (login/signup), feedback submission, and real-time updates on library capacity."
+        features="Features: 
+    - Utilizes React Routing for seamless navigation.
+    - Fully responsive and interactive design ensures accessibility across devices.
+    - Strict adherence to the university's UI style guide for a consistent and professional look.
+    - Future plans include integrating a robust backend system to further enhance functionality."
+        projectLink="https://library-space-rishihood.vercel.app"
+      />
+      <Project
+        imageURL={compitetorAssistant}
         Title="Library Management System"
         tech="Tech Stacks: React.js, JavaScript, HTML, CSS"
         desci="Description: The Library Management System is a digital solution designed to streamline the library experience. It addresses common issues such as cluttered bookshelves, difficulty in locating books, and managing library occupancy. This platform provides an intuitive online interface where students can easily access all essential information about the library. Features include a well-organized display of books sorted by sections, user authentication (login/signup), feedback submission, and real-time updates on library capacity."
