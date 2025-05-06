@@ -26,15 +26,13 @@ export default function Projects() {
       />
       <Project
         imageURL={compitetorAssistant}
-        Title="Library Management System"
-        tech="Tech Stacks: React.js, JavaScript, HTML, CSS"
-        desci="Description: The Library Management System is a digital solution designed to streamline the library experience. It addresses common issues such as cluttered bookshelves, difficulty in locating books, and managing library occupancy. This platform provides an intuitive online interface where students can easily access all essential information about the library. Features include a well-organized display of books sorted by sections, user authentication (login/signup), feedback submission, and real-time updates on library capacity."
+        Title="Startup Competitor Research Assistant"
+        tech="Tech Stacks: Streamlit, Python, Pandas, Plotly, ReportLab, Matplotlib, Seaborn"
+        desci="Description: The Startup Competitor Research Assistant is a tool designed to help product managers quickly analyze and compare Indian startups across various metrics such as funding, maturity score, industry position, and team size. It provides interactive visualizations, detailed PDF reports, and insights into competitors within the same industry."
         features="Features: 
-    - Utilizes React Routing for seamless navigation.
-    - Fully responsive and interactive design ensures accessibility across devices.
-    - Strict adherence to the university's UI style guide for a consistent and professional look.
-    - Future plans include integrating a robust backend system to further enhance functionality."
-        projectLink="https://library-space-rishihood.vercel.app"
+  Data fetching from public sources, clean presentation of startup metrics including funding, maturity score, and team size. Visualizations with Plotly, PDF report generation, and industry-based competitor comparison. Ensures a responsive, user-friendly experience with smooth functionality across devices.
+    - Future plans include integrating more real-time data sources, adding advanced NLP-based competitor analysis, and enhancing the PDF report generation with more detailed visuals and insights."
+        projectLink="https://competitor-researchassistant.streamlit.app"
       />
       <Project
         imageURL={FoodRecipesImage}
