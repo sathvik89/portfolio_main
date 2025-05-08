@@ -7,7 +7,7 @@ import TemperatureConverterImage from "../ProjectImages/Temperatureconverter.png
 import TodoImage from "../ProjectImages/Todo.png";
 import UniverseImage from "../ProjectImages/Universe.png";
 import LibraryImage from "../ProjectImages/Library.png";
-import compitetorAssistant from "../ProjectImages/CompetitorAssistant.png";
+import compitetorAssistant from "../ProjectImages/CompetitorAssistant1.png";
 import Project from "./Project";
 export default function Projects() {
   return (
